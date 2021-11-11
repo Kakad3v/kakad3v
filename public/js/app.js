@@ -760,6 +760,14 @@ var map = {
 	"./index.svelte": [
 		"./resources/js/Pages/index.svelte",
 		"resources_js_Pages_index_svelte"
+	],
+	"./users/login.svelte": [
+		"./resources/js/Pages/users/login.svelte",
+		"resources_js_Pages_users_login_svelte"
+	],
+	"./users/register.svelte": [
+		"./resources/js/Pages/users/register.svelte",
+		"resources_js_Pages_users_register_svelte"
 	]
 };
 function webpackAsyncContext(req) {
@@ -943,7 +951,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + "f04bbf09fda05050" + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_index_svelte":"e640f6aefa4c7ad1","resources_js_Pages_users_login_svelte":"c545eebbde29412e","resources_js_Pages_users_register_svelte":"05bb6b8acd1332fb"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
