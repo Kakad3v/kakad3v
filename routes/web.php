@@ -16,6 +16,6 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return inertia('index');
-});
+})->middleware('auth');
 
 require __DIR__.'/auth.php';

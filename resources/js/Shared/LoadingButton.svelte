@@ -1,4 +1,5 @@
 <script>
+    import LoadingSpinner from './LoadingSpnner.svelte';
     export let loading = false
     $: props = {
       ...$$restProps,
@@ -8,8 +9,11 @@
   
   <button {...props} disabled={loading}>
     {#if loading}
-      <div class="btn-spinner mr-2" />
+      <div class="flex space-x-3 items-center">
+        <LoadingSpinner />
+        <span>Processing...</span>
+      </div>
+    {:else}
+      <slot />
     {/if}
-  
-    <slot />
   </button>

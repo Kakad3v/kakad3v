@@ -1,6 +1,6 @@
 // import Layout from '@/Shared/Layout.svelte'
-import { InertiaProgress } from '@inertiajs/progress'
-import { createInertiaApp } from '@inertiajs/inertia-svelte'
+import { createInertiaApp } from '@inertiajs/inertia-svelte';
+import { InertiaProgress } from '@inertiajs/progress';
 
 createInertiaApp({
   resolve: name => import(`./Pages/${name}.svelte`),
@@ -9,4 +9,7 @@ createInertiaApp({
   },
 })
 
-InertiaProgress.init()
+InertiaProgress.init({
+  color: 'red',
+  showSpinner: true
+});

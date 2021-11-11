@@ -1,15 +1,12 @@
 <script context="module">
-    import { writable } from 'svelte/store'
+    import FlashMessages from '@/Shared/FlashMessages.svelte';
+    import MainMenu from '@/Shared/MainMenu.svelte';
+    import { writable } from 'svelte/store';
     export const title = writable(null)
 </script>
 
 <script>
-    import { inertia, page } from '@inertiajs/inertia-svelte'
-    import { route } from '@/Utils'
-
-    import FlashMessages from '@/Shared/FlashMessages.svelte'
-    import MainMenu from '@/Shared/MainMenu.svelte'
-</script>
+    </script>
 
 <svelte:head>
     <title>{$title ? `${$title} - KakaD3v` : 'KakaD3v'}</title>

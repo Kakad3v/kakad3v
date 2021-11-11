@@ -1,6 +1,6 @@
 <script>
-    import { nanoid } from 'nanoid'
-    import Label from '@/Shared/Label.svelte'
+    import Label from '@/Shared/Label.svelte';
+    import { nanoid } from 'nanoid';
     
     export let id = `text-input-${nanoid(5)}`
     export let value
@@ -21,11 +21,12 @@
   </script>
   
   <div class={$$restProps.class}>
-    <Label {label} {id} />
-  
-    <input {...props} bind:this={input} class:error {id} {type} {value} on:input={update} />
+    <div class="flex flex-col space-y-1">
+      <Label class="text-sm text-gray-600" {label} {id} />
+      <input {...props} bind:this={input} class:error class="rounded-xl text-gray-700" {id} {type} {value} on:input={update} />
+    </div>
   
     {#if error}
-      <div class="form-error">{error}</div>
+      <div class="text-sm text-red-500 mt-1">{error}</div>
     {/if}
   </div>
