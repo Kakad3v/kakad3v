@@ -768,6 +768,10 @@ var map = {
 	"./users/register.svelte": [
 		"./resources/js/Pages/users/register.svelte",
 		"resources_js_Pages_users_register_svelte"
+	],
+	"./users/settings.svelte": [
+		"./resources/js/Pages/users/settings.svelte",
+		"resources_js_Pages_users_settings_svelte"
 	]
 };
 function webpackAsyncContext(req) {
@@ -951,7 +955,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_index_svelte":"c607518db5b528c3","resources_js_Pages_users_login_svelte":"dd0e401506c1c012","resources_js_Pages_users_register_svelte":"da78c0a05c3be74a"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_index_svelte":"9b8b8f7cda9b6692","resources_js_Pages_users_login_svelte":"c0b3901b09d51d51","resources_js_Pages_users_register_svelte":"eb1cf3412241a492","resources_js_Pages_users_settings_svelte":"ba1ca86f2a0fa951"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

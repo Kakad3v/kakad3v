@@ -6,6 +6,7 @@
     import TextInput from '../../Shared/TextInput.svelte';
 
     export let errors = {}
+    
     let sending = false
 
     let form = {
@@ -36,16 +37,15 @@
   
   <div class="px-2 sm:p-6 bg-gradient-to-tr from-indigo-400 to to-pink-400 min-h-screen flex justify-center items-center">
     <div class="w-full sm:max-w-lg">
-      <form
-        class="mt-2 bg-white rounded-2xl shadow-xl overflow-hidden"
+      <form class="mt-2 bg-white rounded-2xl shadow-xl overflow-hidden"
         on:submit|preventDefault={submit}>
-        <div class="px-5 sm:px-10 py-8">
+        <div class="px-5 sm:px-10 py-12">
           <h1 class="text-center font-bold text-2xl text-gray-600">Welcome, Join Us!</h1>
-          <div class="mx-auto mt-6 w-24 border-b-2" />
+          <div class="mx-auto mt-2 w-28 border-b-2" />
           <TextInput
             bind:value={form.name}
             error={errors.name}
-            class="mt-10"
+            class="mt-8"
             label="Name"
             type="text"
             autofocus
@@ -87,9 +87,9 @@
               Create Your Account
             </LoadingButton>
           </div>
-          <div class="need-account flex space-x-2 items-center mt-3">
+          <div class="need-account flex space-x-2 items-center mt-6">
             <p class="text-gray-600 tracking-wide">Already have an account ?</p>
-            <Link href="/users/login" class="text-indigo-500 tracking-wide">Login</Link>
+            <Link href="/users/login" class="text-indigo-500 tracking-wide underline">Login</Link>
           </div>
         </div>
       </form>

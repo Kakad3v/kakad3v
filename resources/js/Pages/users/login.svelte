@@ -6,6 +6,7 @@
     import TextInput from '../../Shared/TextInput.svelte';
 
     export let errors = {}
+    
     let sending = false
 
     let form = {
@@ -33,8 +34,7 @@
   
   <div class="px-2 sm:p-6  bg-gradient-to-tl from-indigo-400 to to-pink-400 min-h-screen flex justify-center items-center">
     <div class="w-full sm:max-w-lg">
-      <form
-        class="mt-8 bg-white rounded-2xl shadow-xl overflow-hidden"
+      <form class="bg-white rounded-2xl shadow-xl overflow-hidden"
         on:submit|preventDefault={submit}>
         <div class="px-5 sm:px-10 py-12">
           <h1 class="text-center font-bold text-2xl text-gray-600">Hi there, Welcome Back!</h1>
@@ -72,9 +72,9 @@
               Continue
             </LoadingButton>
           </div>
-          <div class="need-account flex space-x-2 items-center mt-4">
+          <div class="need-account flex space-x-2 items-center mt-8">
             <p class="text-gray-600 tracking-wide">Need an account ?</p>
-            <Link href="/users/register" class="text-indigo-500 tracking-wide">Signup</Link>
+            <Link href="/users/register" class="text-indigo-500 tracking-wide underline">Signup</Link>
           </div>
         </div>
       </form>

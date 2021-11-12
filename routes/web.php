@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\Users\UserSettingsController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +17,9 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return inertia('index');
 })->middleware('auth');
+
+Route::get('/users/settings', UserSettingsController::class)
+    ->middleware('auth')
+    ->name('register');
 
 require __DIR__.'/auth.php';
