@@ -761,6 +761,10 @@ var map = {
 		"./resources/js/Pages/index.svelte",
 		"resources_js_Pages_index_svelte"
 	],
+	"./posts/components/PostCard.svelte": [
+		"./resources/js/Pages/posts/components/PostCard.svelte",
+		"resources_js_Pages_posts_components_PostCard_svelte"
+	],
 	"./posts/edit.svelte": [
 		"./resources/js/Pages/posts/edit.svelte",
 		"resources_js_Pages_posts_edit_svelte"
@@ -963,7 +967,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_index_svelte":"1bfb77565ba7f60d","resources_js_Pages_posts_edit_svelte":"9cbf093e30824dce","resources_js_Pages_posts_show_svelte":"8d092671a826e181","resources_js_Pages_users_login_svelte":"669fe5df910b7f2f","resources_js_Pages_users_register_svelte":"eb1cf3412241a492","resources_js_Pages_users_settings_svelte":"ba1ca86f2a0fa951"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_index_svelte":"68daa0a0a645eda4","resources_js_Pages_posts_components_PostCard_svelte":"7a46744c47e9407d","resources_js_Pages_posts_edit_svelte":"760d4c1e26a24381","resources_js_Pages_posts_show_svelte":"62e1211d44b7b5ed","resources_js_Pages_users_login_svelte":"669fe5df910b7f2f","resources_js_Pages_users_register_svelte":"eb1cf3412241a492","resources_js_Pages_users_settings_svelte":"ba1ca86f2a0fa951"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

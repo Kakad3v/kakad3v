@@ -2,11 +2,13 @@
 
 namespace App\Http\Resources\Posts;
 
-use App\Http\Controllers\Posts\EditPostController;
-use App\Http\Controllers\Posts\PostShowController;
 use App\Policies\Posts\PostPolicy;
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Controllers\Posts\EditPostController;
+use App\Http\Controllers\Posts\PostShowController;
+use App\Http\Resources\Users\UserResource;
 
+/** @mixin \App\Models\User */
 class PostResource extends JsonResource
 {
     /**
@@ -22,6 +24,8 @@ class PostResource extends JsonResource
             'title' => $this->title,
             'slug' => $this->slug,
             'body' => $this->body,
+            'src' => $this->image_url,
+            'user' => new UserResource($this->user),
             
             'can' => [
                 PostPolicy::ADMINISTER => auth()->user()->can(PostPolicy::ADMINISTER, $this->resource)

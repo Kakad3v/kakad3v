@@ -52,4 +52,9 @@ class User extends Authenticatable
     {
         return $post->user_id === $this->id;
     }
+
+    public function getAvatarAttribute()
+    {
+        return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $this->email ) ) ) . "?d=identicon&s=40";
+    }
 }

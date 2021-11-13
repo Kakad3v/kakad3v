@@ -1,11 +1,11 @@
 <script>
-    import { page } from '@inertiajs/inertia-svelte'
+    import { page } from '@inertiajs/inertia-svelte';
     let show = true
     function close() {
       show = false
     }
   </script>
-  
+
   {#if $page.props.flash.success && show}
     <div class="mb-8 flex items-center justify-between bg-green-500 rounded max-w-3xl">
       <div class="flex items-center">

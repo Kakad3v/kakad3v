@@ -25,6 +25,8 @@
         "@inertiajs/inertia": "^0.9.4",
         "@inertiajs/inertia-svelte": "^0.7.4",
         "@inertiajs/progress": "^0.2.6",
+        "@tailwindcss/aspect-ratio": "^0.3.0",
+        "@tailwindcss/typography": "^0.4.1",
         "nanoid": "^3.1.30",
         "postcss-import": "^14.0.2",
         "postcss-nesting": "^9.0.0",
