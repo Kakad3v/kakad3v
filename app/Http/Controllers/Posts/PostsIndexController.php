@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Posts;
 
 use App\Models\Post;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Posts\PostCollection;
 
 class PostsIndexController extends Controller
 {
@@ -11,6 +12,8 @@ class PostsIndexController extends Controller
     {
         $posts = Post::latest()->get();
 
-        return inertia('index', compact('posts'));
+        return inertia('index', [
+            'posts' => new PostCollection($posts)
+        ]);
     }
 }

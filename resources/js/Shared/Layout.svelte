@@ -12,7 +12,7 @@
     <title>{$title ? `${$title} - KakaD3v` : 'KakaD3v'}</title>
 </svelte:head>
 
-<div class="flex flex-grow overflow-hidden">
+<div class="flex flex-grow overflow-hidden bg-indigo-50 h-full min-h-screen">
     <div class="flex-1 px-4 py-8 md:p-12 overflow-y-auto" scroll-region>
       <MainMenu />
       <FlashMessages />

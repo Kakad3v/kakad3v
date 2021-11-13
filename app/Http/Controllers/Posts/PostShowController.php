@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Posts;
 
 use App\Models\Post;
 use App\Http\Controllers\Controller;
+use App\Policies\Posts\PostPolicy;
 
 class PostShowController extends Controller
 {
@@ -12,3 +13,4 @@ class PostShowController extends Controller
         return inertia('posts/show', compact('post'));
     }
 }
+

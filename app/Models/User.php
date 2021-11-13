@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Policies\Posts\PostPolicy;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -45,5 +46,10 @@ class User extends Authenticatable
     public function posts()
     {
         return $this->hasMany(Post::class);
+    }
+
+    public function isAdminOrOwner(Post $post)
+    {
+        return $post->user_id === $this->id;
     }
 }
