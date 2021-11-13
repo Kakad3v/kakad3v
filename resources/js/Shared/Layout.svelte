@@ -6,7 +6,7 @@
 </script>
 
 <script>
-    </script>
+</script>
 
 <svelte:head>
     <title>{$title ? `${$title} - KakaD3v` : 'KakaD3v'}</title>

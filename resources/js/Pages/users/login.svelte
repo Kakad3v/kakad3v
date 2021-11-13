@@ -50,7 +50,7 @@
             autocapitalize="off" />
           <TextInput 
             bind:value={form.password} 
-            error={errors.email}
+            error={errors.password}
             class="mt-4" 
             label="Password" 
             type="password" 
