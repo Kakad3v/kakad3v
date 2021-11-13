@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\Users\UserSettingsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Posts\PostShowController;
+use App\Http\Controllers\Posts\PostsIndexController;
+use App\Http\Controllers\Users\UserSettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return inertia('index');
-})->middleware('auth');
+Route::get('/', PostsIndexController::class)
+    ->middleware('auth');
 
+Route::get('/posts/{post:slug}', PostShowController::class)
+    ->name('posts.show');
+    
 Route::get('/users/settings', UserSettingsController::class)
     ->middleware('auth')
     ->name('register');

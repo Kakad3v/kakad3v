@@ -761,6 +761,10 @@ var map = {
 		"./resources/js/Pages/index.svelte",
 		"resources_js_Pages_index_svelte"
 	],
+	"./posts/show.svelte": [
+		"./resources/js/Pages/posts/show.svelte",
+		"resources_js_Pages_posts_show_svelte"
+	],
 	"./users/login.svelte": [
 		"./resources/js/Pages/users/login.svelte",
 		"resources_js_Pages_users_login_svelte"
@@ -955,7 +959,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_index_svelte":"1ca92d5f73ba83c3","resources_js_Pages_users_login_svelte":"669fe5df910b7f2f","resources_js_Pages_users_register_svelte":"eb1cf3412241a492","resources_js_Pages_users_settings_svelte":"ba1ca86f2a0fa951"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_index_svelte":"f00bf01bff3161f8","resources_js_Pages_posts_show_svelte":"ef297e1c9d109169","resources_js_Pages_users_login_svelte":"669fe5df910b7f2f","resources_js_Pages_users_register_svelte":"eb1cf3412241a492","resources_js_Pages_users_settings_svelte":"ba1ca86f2a0fa951"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

@@ -16,6 +16,8 @@
     <div class="flex-1 px-4 py-8 md:p-12 overflow-y-auto" scroll-region>
       <MainMenu />
       <FlashMessages />
-      <slot />
+      <div class="mt-4">
+        <slot />
+      </div>
     </div>
 </div>
