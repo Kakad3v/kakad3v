@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\Test;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Posts\EditPostController;
 use App\Http\Controllers\Posts\PostShowController;
@@ -20,5 +21,9 @@ Route::get('/posts/{post:slug}/edit', EditPostController::class)
 Route::get('/users/settings', UserSettingsController::class)
     ->middleware('auth')
     ->name('register');
+
+Route::get('/broadcast', function(){
+    broadcast(new Test);
+}); 
 
 require __DIR__.'/auth.php';

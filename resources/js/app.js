@@ -1,3 +1,5 @@
+require('./bootstrap');
+
 import { createInertiaApp } from '@inertiajs/inertia-svelte';
 import { InertiaProgress } from '@inertiajs/progress';
 

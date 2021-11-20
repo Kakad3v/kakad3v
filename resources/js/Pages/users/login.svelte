@@ -45,7 +45,6 @@
             class="mt-10"
             label="Email"
             type="email"
-            autofocus
             placeholder="Your email"
             autocapitalize="off" />
           <TextInput 

@@ -48,11 +48,10 @@
             class="mt-8"
             label="Name"
             type="text"
-            autofocus
             autocapitalize="off" 
             placeholder="Your Name"
             />
-            <TextInput
+          <TextInput
             bind:value={form.email}
             error={errors.email}
             class="mt-3"
