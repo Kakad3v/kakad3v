@@ -12,13 +12,12 @@ class Post extends Model
 
     protected $guarded = [];
 
-    protected static function booted()
+    public static function booted()
     {
-        static::created(function($model){
+        static::creating(function($model){
             $model->slug = Str::slug($model->title);
         });
     }
-
 
     public function user()
     {
