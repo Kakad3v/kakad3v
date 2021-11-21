@@ -12,12 +12,19 @@ class PostStoreController extends Controller
 {
     public function __invoke(Request $request)
     {
+        $request->validate([
+            'title' => ['required', 'max:100'],
+            'image_url' => ['required', 'image'],
+            'body' => ['required', 'min:50'],
+        ]);
+
         $post = auth()->user()->posts()->create(
-            $request->validate([
-                'title' => ['required', 'max:100'],
-                'image_url' => ['required', 'url'],
-                'body' => ['required', 'min:50'],
-            ])
+            [
+            'title' => $request->title,
+            'body' => $request->body,
+            'title' => $request->title,
+            'image_url' => $request->file('image_url') ? $request->file('image_url')->store('post-images', 'public') : null,
+            ]
         );
 
         broadcast(new PostAdded($post));

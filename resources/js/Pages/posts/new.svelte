@@ -1,6 +1,7 @@
 <script context="module">
     import Layout from '@/Shared/Layout.svelte';
     import { Inertia } from '@inertiajs/inertia';
+    import FileInput from '../../Shared/FileInput.svelte';
     import LoadingButton from '../../Shared/LoadingButton.svelte';
     import TextAreaInput from '../../Shared/TextAreaInput.svelte';
     import TextInput from '../../Shared/TextInput.svelte';
@@ -52,13 +53,13 @@
                 autocapitalize="off" 
                 placeholder="Post Title"
             />
-            <TextInput 
-                bind:value={form.image_url} 
-                error={errors.image_url}
-                class="mt-3" 
-                label="Image" 
-                type="Text" 
-                placeholder="Cover Image Url"
+            <FileInput
+              bind:value={form.image_url}
+              error={errors.image_url}
+              class="pr-6 pb-8 w-full lg:w-1/2"
+              type="file"
+              accept="image/*"
+              label="Image" 
             />
            <TextAreaInput
                 bind:value={form.body}
